@@ -1,0 +1,84 @@
+---- Minecraft Crash Report ----
+// This doesn't make any sense!
+
+Time: 29/05/20 16:16
+Description: Ticking entity
+
+java.lang.ArrayIndexOutOfBoundsException: 1879235414
+	at abr.d(SourceFile:542)
+	at akz.h(SourceFile:2189)
+	at ala.h(SourceFile:295)
+	at atb.h(SourceFile:75)
+	at xd.a(SourceFile:602)
+	at bjw.a(SourceFile:534)
+	at xd.a(SourceFile:398)
+	at net.minecraft.server.MinecraftServer.b(SourceFile:854)
+	at wd.b(SourceFile:347)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:793)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:655)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at abr.d(SourceFile:542)
+	at akz.h(SourceFile:2189)
+	at ala.h(SourceFile:295)
+	at atb.h(SourceFile:75)
+	at xd.a(SourceFile:602)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:cod (atg)
+	Entity ID: 6001
+	Entity Name: Cod
+	Entity's Exact location: -205.14, 60.21, -101.25
+	Entity's Block location: World: (-206,60,-102), Chunk: (at 2,3,10 in -13,-7; contains blocks -208,0,-112 to -193,255,-97), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: -0.05, -0.00, 0.03
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at bjw.a(SourceFile:534)
+	at xd.a(SourceFile:398)
+
+-- Affected level --
+Details:
+	All players: 2 total; [xe['Shaanphin'/115, l='world', x=-316.06, y=57.00, z=-272.64], xe['Infinitemarcus'/396, l='world', x=-235.41, y=23.00, z=-112.73]]
+	Chunk stats: ServerChunkCache: 3715
+	Level dimension: minecraft:overworld
+	Level name: world
+	Level seed: 3194657
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (-146,64,220), Chunk: (at 14,4,12 in -10,13; contains blocks -160,0,208 to -145,255,223), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 2486550 game time, 2693762 day time
+	Known server brands: vanilla
+	Level was modded: false
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 38299 (now: false), thunder time: 32357 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.b(SourceFile:854)
+	at wd.b(SourceFile:347)
+	at net.minecraft.server.MinecraftServer.a(SourceFile:793)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:655)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Linux (amd64) version 4.19.0-9-amd64
+	Java Version: 1.8.0_252, Debian
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Debian
+	Memory: 1729097640 bytes (1648 MB) / 2138570752 bytes (2039 MB) up to 2138570752 bytes (2039 MB)
+	CPUs: 4
+	JVM Flags: 2 total; -Xms2048m -Xms2048M
+	Player Count: 2 / 20; [xe['Shaanphin'/115, l='world', x=-316.06, y=57.00, z=-272.64], xe['Infinitemarcus'/396, l='world', x=-235.41, y=23.00, z=-112.73]]
+	Data Packs: vanilla
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
